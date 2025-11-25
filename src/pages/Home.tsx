@@ -1,12 +1,9 @@
 import React from 'react';
 import { Wallet, CreditCard, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import FeatureCard from '../components/FeatureCard';
 
-interface HomeProps {
-    setCurrentPage: (page: string) => void;
-}
-
-const Home: React.FC<HomeProps> = ({ setCurrentPage }) => (
+const Home: React.FC = () => (
     <div className="animate-fade-in">
         {/* Hero */}
         <div className="bg-slate-900 text-white py-20 px-4 text-center relative overflow-hidden">
@@ -15,12 +12,12 @@ const Home: React.FC<HomeProps> = ({ setCurrentPage }) => (
                 <h1 className="text-4xl md:text-6xl font-bold mb-6">Empowering Members, Building Wealth</h1>
                 <p className="text-xl text-gray-300 mb-8">Join the NDC Cooperative Society today. Secure your future with flexible savings, low-interest loans, and annual dividends.</p>
                 <div className="flex justify-center gap-4">
-                    <button onClick={() => setCurrentPage('login')} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+                    <Link to="/login" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 inline-block">
                         Member Portal
-                    </button>
-                    <button onClick={() => setCurrentPage('contact')} className="bg-transparent border-2 border-white hover:bg-white hover:text-slate-900 text-white font-bold py-3 px-8 rounded-full transition">
+                    </Link>
+                    <Link to="/contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-slate-900 text-white font-bold py-3 px-8 rounded-full transition inline-block">
                         Contact Us
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

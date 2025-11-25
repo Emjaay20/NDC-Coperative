@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { memberData } from '../../data/mockData';
 
 const Profile = () => {

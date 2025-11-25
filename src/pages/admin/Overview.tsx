@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { coopStats } from '../../data/mockData';
 
 const AdminOverview = () => {
